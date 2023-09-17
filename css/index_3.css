@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    margin: -1px;
+    padding: -1px;
+}
+
+.grid-container >*{
+    
+    padding: 0px;
+    text-align: center;
+}
+
+.header{
+    grid-area: header;
+    background-color: rgb(255, 255, 255);
+}
+
+.logo{ /* logo del header*/
+    float: left;
+    margin: 25px; 
+    width: 230px;
+}
+
+.portada{  /* imagen del header*/
+    margin-right: 0px;
+    text-align: right;
+    width: 1030px;
+}
+
+.aside{
+    grid-area: aside;
+    background-color: #76bfffcb ;
+}
+
+img{ /* imagenes del slider*/
+    width: 677px;
+}
+
+#image{ /* contenedor de imagenes del slider*/
+    width: 677px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+#image ul{
+    list-style: none;
+    width: 2708;
+    display: flex;
+
+    animation: slide 20s infinite alternate;
+}
+
+@keyframes slide{
+
+    0% {margin-left: 0px;}
+    20% {margin-left: 0px;}
+
+    25% {margin-left: -677px;}
+    45% {margin-left: -677px;}
+
+    50%{margin-left: -1354px;}
+    70%{margin-left: -1354px;}
+
+    75%{margin-left: -2031px;}
+    100%{margin-left: -2031px;}
+}
+
+.section{
+    grid-area: section;
+    background-color: white;
+    padding: 20px;
+}
+
+.one{ /* articulo 1*/
+    width: 410px;
+    float: left;
+    text-align: left;
+}
+
+.two{ /* articulo 2*/
+    width: 410px;
+    float: left;  
+    margin: 0px 15px;
+}
+
+h1{ /* titulo de los 3 articulos*/
+    text-align: center;
+    font-family: serif;
+    font-size: 20px;
+}
+
+p{ /* texto de los 3 articulos articulos*/
+    text-align: left;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.three{ /* articulo 3*/
+    width: 410px;
+    float: right;
+}
+
+.footer{
+    grid-area: footer;
+    background-image: url(/blogs/imagenes_blog3/image.jpg);
+    background-position: center;
+}
+
+.img1{ /* imagen icono ubicacion del footer*/
+    margin-top: 50px;
+    display: inline-block;
+    width: 30px;
+}
+
+.img2{ /* imagen icono tejefono del footer*/
+    display: inline;
+    width: 30px;
+}
+
+.img3{ /* imagen icono correo del footer*/
+    display: inline;
+    width: 30px;
+}
+
+.pie{ /* texto de cada icono en footer*/
+    text-align: center;
+    display: inline;
+    color: white;
+}
+
+.copyright{
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+.grid-container {
+    display: grid;
+    gap: 0px;
+    grid-template-columns: 328px 328px 328px 328px;
+    grid-template-rows: 169px 380px auto 160px;
+    grid-template-areas: 
+     "header header header header"
+     "aside aside aside aside"
+     "section section section section"
+     "footer footer footer footer";
+}
